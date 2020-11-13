@@ -1,10 +1,7 @@
-console.log(location.pathname);
-console.log(location.pathname.split('/'));
-
 var linkname = location.pathname.split('/')[1]
 fetch(`https://raw.githubusercontent.com/latinonetonline/linksdb/master/links/${linkname}`)
 .then(data => data.json())
-    .then(data => window.location.href = data.url)
+    .then(data => window.location.href = data.Url)
 
 
 
